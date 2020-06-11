@@ -957,6 +957,8 @@ func TestInit_getProviderDetectedLegacy(t *testing.T) {
 		"hashicorp/baz -> terraform-providers/baz",
 		"terraform 0.13upgrade .",
 		"terraform 0.13upgrade child",
+		"The following remote modules must also be upgraded",
+		"- module.dicerolls at acme/bar/random",
 	}
 	for _, want := range errors {
 		if !strings.Contains(errOutput, want) {

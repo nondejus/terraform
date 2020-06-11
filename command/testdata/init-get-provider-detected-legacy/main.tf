@@ -12,3 +12,7 @@ provider frob {}
 module "some-baz-stuff" {
   source = "./child"
 }
+
+module "dicerolls" {
+  source = "acme/bar/random"
+}
